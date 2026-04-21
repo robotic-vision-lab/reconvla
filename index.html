@@ -48,7 +48,7 @@
           </h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              Zongyao Lyu*, Lingling Chen*, and <a href="https://ranger.uta.edu/~wjbeksi">William J. Beksi</a></span>
+              Lingling Chen, Zongyao Lyu, and <a href="https://ranger.uta.edu/~wjbeksi">William J. Beksi</a></span>
             </div>
           <div class="is-size-5 publication-university">
             <span class="author-block">The University of Texas at Arlington</span>
@@ -130,13 +130,15 @@
              alt="ReconVLA Architecture"
              style="width: 100%; height: auto; border-radius: 8px;">
         <figcaption style="margin-top: 10px; font-size: 0.95rem; color: #aaa; line-height: 1.5;">
-          <strong>Architecture.</strong> The ReconVLA framework consists of two main components:
-          (i) <em>SMD Failure Detection</em>, which monitors whether the robot's state deviates
-          from the distribution of safe behaviors and detects when the robot is approaching an
-          unsafe or out-of-distribution state; (ii) <em>CQR Action Selection</em>, which evaluates
-          the uncertainty of multiple noise-conditioned action samples and selects the action with
-          the lowest predicted uncertainty for execution. Together, these components enable reliable
-          and uncertainty-aware control for vision-language-action models.
+          <strong>Architecture.</strong> The ReconVLA framework consists of two
+          main components: (i) <em>SMD Failure Detection</em>, which monitors
+          whether the robot's state deviates from the distribution of safe
+          behaviors and detects when the robot is approaching an unsafe or
+          out-of-distribution state; (ii) <em>CQR Action Selection</em>, which
+          evaluates the uncertainty of multiple noise-conditioned action
+          samples and selects the action with the lowest predicted uncertainty
+          for execution. Together, these components enable reliable and
+          uncertainty-aware control for vision-language-action models.
         </figcaption>
       </figure>
     </div>
@@ -151,24 +153,27 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Vision-language-action (VLA) models have emerged as generalist robotic
-            controllers capable of mapping visual observations and natural language
-            instructions to continuous action sequences. However, VLAs provide no calibrated
-            measure of confidence in their action predictions, thus limiting their
-            reliability in real-world settings where uncertainty and failures must be
-            anticipated. To address this problem we introduce ReconVLA, a reliable conformal
-            model that produces uncertainty-guided and failure-aware control signals.
-            Concretely, our approach applies conformal prediction directly to the action
-            token outputs of pretrained VLA policies, yielding calibrated uncertainty
-            estimates that correlate with execution quality and task success. Furthermore,
-            we extend conformal prediction to the robot state space to detect outliers or
-            unsafe states before failures occur, providing a simple yet effective failure
-            detection mechanism that complements the action-level uncertainty. We evaluate
-            ReconVLA in both simulation and real robot experiments across diverse
-            manipulation tasks. Our results show that conformalized action predictions
-            consistently improve failure anticipation, reduce catastrophic errors, and
-            provide a calibrated measure of confidence without retraining or modifying the
-            underlying VLA.
+            Vision-language-action (VLA) models have emerged as generalist
+            robotic controllers capable of mapping visual observations and
+            natural language instructions to continuous action sequences.
+            However, VLAs provide no calibrated measure of confidence in their
+            action predictions, thus limiting their reliability in real-world
+            settings where uncertainty and failures must be anticipated. To
+            address this problem we introduce ReconVLA, a reliable conformal
+            model that produces uncertainty-guided and failure-aware control
+            signals.  Concretely, our approach applies conformal prediction
+            directly to the action token outputs of pretrained VLA policies,
+            yielding calibrated uncertainty estimates that correlate with
+            execution quality and task success. Furthermore, we extend
+            conformal prediction to the robot state space to detect outliers or
+            unsafe states before failures occur, providing a simple yet
+            effective failure detection mechanism that complements the
+            action-level uncertainty. We evaluate ReconVLA in both simulation
+            and real robot experiments across diverse manipulation tasks. Our
+            results show that conformalized action predictions consistently
+            improve failure anticipation, reduce catastrophic errors, and
+            provide a calibrated measure of confidence without retraining or
+            modifying the underlying VLA.
           </p>
         </div>
       </div>
@@ -180,13 +185,12 @@
     <!-- Citation -->
     <h2 class="title is-3">Citation</h2>
     <p>
-      If you find this project useful, then please consider citing both our
-      paper and dataset.
+      If you find this project useful, then please consider citing our paper.
     </p>
-    <pre><code>@article{lyu2026reconvla,
+    <pre><code>@article{chen2026reconvla,
   title={ReconVLA: An Uncertainty-Guided and Failure-Aware Vision-Language-Action Framework for Robotic Control},
-  author={Lyu, Zongyao, Chen, Lingling, and Beksi, William J.},
-  journal={TBD},
+  author={Chen, Lingling, Lyu, Zongyao, and Beksi, William J},
+  journal={arXiv preprint arXiv:2604.16677},
   year={2026},
 }</code></pre>
   </div>
